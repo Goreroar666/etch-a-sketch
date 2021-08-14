@@ -1,0 +1,1 @@
+In this repo I will be making an etch-a-sketch. It'll consist of js, css and html. 

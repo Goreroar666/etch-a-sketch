@@ -1,0 +1,12 @@
+.row {
+    border: 0.5px solid black;
+    height: 1em;
+    line-height: 1em;
+}
+.box {
+    border: 0.5px solid black;
+    height: 1em;
+    width: 6.25%;
+    box-sizing: border-box;
+    display: inline-block;
+}
