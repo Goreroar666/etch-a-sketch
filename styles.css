@@ -1,10 +1,19 @@
-.row {
-    height: 1em;
-    line-height: 1em;
+:root {
+    --grid-columns: 1;
+    --grid-rows: 1;
 }
-.box {
-    height: 1em;
-    width: 6.25%;
-    box-sizing: border-box;
-    display: inline-block;
+
+#main {
+    height: 1000px;
+    width: 1000px;
+    border: 1px solid gray;    
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+.grid-cell {
+    padding: 1em;
+    border: 1px solid gray;
+    text-align: center;
 }
