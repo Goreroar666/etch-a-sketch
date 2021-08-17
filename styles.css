@@ -17,3 +17,19 @@
     border: 1px solid gray;
     text-align: center;
 }
+#clearBtn {
+    width: 100px;
+    height: 50px;
+    border-radius: 1;
+    font-size: large;
+    font-family: fantasy;
+    margin: 10px;
+}
+#randomColor {
+    width: 100px;
+    height: 50px;
+    border-radius: 1;
+    font-size: large;
+    font-family: fantasy;
+    margin: 10px;
+}
