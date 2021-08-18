@@ -1,14 +1,17 @@
 const sketchPad = document.getElementById("main");
-let range = document.getElementById("slider");
+const clearButton = document.getElementById("clearBtn");
+const chooseColor = document.getElementById("chooseColor");
+
 let output = document.getElementById("size");
 let sliderValue = slider.value;
-output.innerText = slider.value;
+let rainbow = false; 
+output.innerText = sliderValue;
 
 
-function makeGrid(columns, rows) {
-sketchPad.style.setProperty('--grid-rows', rows);
-sketchPad.style.setProperty('--grid-columns', columns);
-for (let i = 0; i < columns * rows; i++) {
+function makeGrid(sliderValue) {
+sketchPad.style.setProperty('--grid-rows', sliderValue);
+sketchPad.style.setProperty('--grid-columns', sliderValue);
+for (let i = 0; i < sliderValue * sliderValue; i++) {
     let cell = document.createElement('div');
     sketchPad.appendChild(cell).className = "grid-cell";
 };
@@ -19,19 +22,15 @@ sketchPad.addEventListener ("mouseover", function (draw) {
     draw.target.style.background = "green";
 })
 
-const clearButton = document.getElementById("clearBtn");
+function resetGrid() {
+sketchPad.innerHTML= '';
+makeGrid(sliderValue);
+}
 
-clearButton.addEventListener ('click', function (event) {
-window.location.reload();
-});
+clearButton.onclick = () => resetGrid();
 
 slider.oninput = function() {
-    output.innerText = slider.value;
+    output.innerText = this.value;
+    sliderValue = this.value;
+    resetGrid(sliderValue); 
 }
-    slider.addEventListener ("change", () => {
-        let oldCells = document.getElementById("main");
-        while (oldCells.firstChild) {
-            oldCells.removeChild(oldCells.firstChild);
-        }
-        makeGrid(sliderValue, sliderValue)
-    })
