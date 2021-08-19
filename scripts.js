@@ -23,7 +23,7 @@ function makeGrid(sliderValue) {
 function drawColor(draw) {
     let color;
     if (rainbow) {
-    color = random_rgba();
+    color = randomRgba();
     } else {
     color = chooseColor.value;
     }
@@ -35,7 +35,7 @@ function resetGrid() {
     makeGrid(sliderValue);
 }
 
-function random_rgba() {
+function randomRgba() {
     let o = Math.round, r = Math.random, s = 255;
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
