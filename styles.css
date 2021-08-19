@@ -3,18 +3,27 @@
     --grid-rows: 1;
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    max-width: 500px;
+    margin: auto;
+    background-color: lightpink;
+}
 #main {
     height: 600px;
     width: 600px;
-    border: 1px solid gray;    
+    border: 20px solid gray;    
     display: grid;
     gap: 0;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
+    margin-bottom: 50px;
 }
 .grid-cell {
     border: 1px solid gray;
-    text-align: center;
 }
 #clearBtn {
     width: 100px;
@@ -22,7 +31,7 @@
     border-radius: 1;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
+    margin-right: 10px;
 }
 #randomColor {
     width: 100px;
@@ -30,5 +39,26 @@
     border-radius: 1;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
+    
+}
+.buttons {
+    position: relative;;
+}
+#chooseColor {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+p {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#slider {
+    width: 500px;
+}
+#gitHubImg {
+    background-color: transparent;
+    height: 75px;
+    width: 75px;
+    position: center;
+    margin-left: 300px;
 }

@@ -6,18 +6,27 @@
     <link rel ="stylesheet" href="styles.css">
 
 </head>
+
 <body>
     <h1>Etch-a-sketch</h1>
 <div class="buttons">
     <button id="clearBtn">Clear grid</button>
     <button id="randomColor">Rainbow</button>
+    <p>Pick your color:</p>
     <input type="color" id="chooseColor" value="#e66465">
-    <div class="sliderDiv">
+</div>
+<div class="sliderDiv">
+    <p>Choose the size of the grid:</p>
     <input type="range" min="1" max="100" value = 16 id="slider">
     <p>Grid size: <span id="size"></span></p>
-    </div>
 </div>
+
 <div id="main"></div>
+
+<p style="margin-left: 260px;">Made by: Goreroar</p>
+<a href="https://github.com/Goreroar666" target="blank"><img src="https://cdn.iconscout.com/icon/free/png-256/github-1521500-1288242.png" id = "gitHubImg"></a>
+
 <script src="scripts.js" defer></script>
+
 </body>
 </html>
